@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pulse-backend-engine
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: GEMINI_API_KEY
+        sync: false
